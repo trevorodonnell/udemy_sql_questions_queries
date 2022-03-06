@@ -101,7 +101,7 @@
 	LIMIT 1
 	
 --What is the average & total number of subscriptions each year?	
-
+		
 	SELECT 
 	COUNT(title) as courses_created_per_year, 
 	round(AVG(num_subscribers), 2)
@@ -147,6 +147,7 @@
 	GROUP BY 2
 	
 --What is the average number of subscriptions made a year?	
+
 	SELECT 
 	COUNT(title)
 	AVG(num_subscribers)
@@ -263,6 +264,7 @@
 	GROUP BY 1
 	
 --What is the average rating of a course for number of lectures?	
+
 	﻿SELECT num_published_lectures, COUNT(num_published_lectures), AVG(avg_rating)
 	FROM udemy_raw_data
 	WHERE num_reviews>0
@@ -271,6 +273,7 @@
 	
 	
 --What is the average number of subscribers per price category	
+
 	﻿SELECT
 	CASE
 	WHEN (price_detail__amount*0.014) = 0 THEN 'free'
@@ -296,6 +299,7 @@
 	ORDER BY 1
 	
 --What is the total number of subscriptions in each price category?	
+
 	﻿SELECT
 	CASE
 	WHEN (price_detail__amount*0.014) = 0 THEN 'free'
@@ -320,7 +324,9 @@
 	GROUP BY 1
 	ORDER BY 1
 	ASC
+	
 --What is the total number of courses offered in each price category?	
+
 	﻿SELECT
 	CASE
 	WHEN (price_detail__amount*0.014) = 0 THEN 'free'
@@ -347,11 +353,13 @@
 	
 	
 --What is the average number of subscribers for a paid course vs. free?	
+
 	﻿SELECT is_paid, AVG(num_subscribers)
 	FROM udemy_raw_data
 	GROUP BY 1
 
 --What is the average number of free courses created per year	
+
 	SELECT 
 	COUNT(title) as courses_created_per_year, 
 	CASE
@@ -378,9 +386,6 @@
 	FROM udemy_raw_data
 	WHERE is_paid like 'TRUE'
 
---What is the average difference between created date AND published	
-	
-	
 --What is the average number of lectures per course?
 	
 	﻿SELECT AVG(num_published_lectures)
