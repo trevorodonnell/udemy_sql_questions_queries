@@ -1,5 +1,6 @@
 # udemy_sql_questions_queries
-## This is a .readme of a series of questions I created for myself and answered using SQL queries regarding 
+## This is a .readme of a series of questions I created and answered using metric data from Udemy courses, originally published on Kaggle.com
+## https://www.kaggle.com/jilkothari/finance-accounting-courses-udemy-13k-course
 	
 --What is the total number of courses offered?	
 
