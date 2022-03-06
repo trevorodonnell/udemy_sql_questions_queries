@@ -13,7 +13,9 @@
 	FROM udemy_raw_data 
 	GROUP BY 1
 	
---How many subscriptions have been made	﻿SELECT sum(num_subscribers)
+--How many subscriptions have been made?
+
+	SELECT sum(num_subscribers)
 	FROM udemy_raw_data
 	
 --How many subscriptions are sold vs. free?	
@@ -34,6 +36,7 @@
 	GROUP BY 1
 
 --How many courses have lectures vs. no lectures?	
+
 	﻿SELECT 
 	  CASE 
 	    WHEN num_published_lectures > 0 THEN '> 0' 
@@ -44,6 +47,7 @@
 	GROUP BY 1
 	
 --How many courses have tests vs. no tests?	
+
 	﻿SELECT 
 	  CASE 
 	    WHEN num_published_practice_tests > 0 THEN '> 0' 
@@ -54,6 +58,7 @@
 	GROUP BY 1
 	
 --How many courses have a discount vs. no discount?	
+
 	﻿SELECT 
 	  CASE 
 	    WHEN discount_price__amount> 0 THEN '> 0' 
@@ -62,6 +67,7 @@
 	  COUNT(*)
 	FROM udemy_raw_data
 	GROUP BY 1
+	
 --What is the highest price for a course (USD)?	
 
 	﻿SELECT MAX(price_detail__amount)*0.014
