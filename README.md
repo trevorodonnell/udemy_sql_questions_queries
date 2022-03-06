@@ -1,5 +1,5 @@
 # udemy_sql_questions_queries
-This is a .readme of a series of questions I created for myself and answered using SQL queries regarding 
+## This is a .readme of a series of questions I created for myself and answered using SQL queries regarding 
 	
 --What is the total number of courses offered?	
 
